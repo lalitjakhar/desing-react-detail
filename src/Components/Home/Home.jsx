@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
 const Home = () => {
@@ -19,7 +19,7 @@ const Home = () => {
           {data?.products?.map((mobile, index) => {
             return (
               <Grid item xs>
-                <img src={mobile.thumbnail} alt="" width={350} height={400} />
+                <img src={mobile.thumbnail} alt="" width={350} height={350} />
                 <Box>
                   <Box sx={{ display: "flex", justifyContent: "center" }}>
                     <Typography variant="h5" sx={{ fontWeight: "600" }}>
@@ -36,7 +36,7 @@ const Home = () => {
                   </Box>
                 </Box>
               </Grid>
-            );s
+            );
           })}
         </Grid>
       </Box>
