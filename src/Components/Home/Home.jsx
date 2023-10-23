@@ -16,7 +16,7 @@ const Home = () => {
     <>
       <Box sx={{ margin: "8rem 2rem" }}>
         <Grid container spacing={2}>
-          {data?.products?.map((mobile) => {
+          {data?.products?.map((mobile, index) => {
             return (
               <Grid item xs>
                 <img src={mobile.thumbnail} alt="" width={350} height={350} />

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const Details = () => {
-const params = useParams();
+  const params = useParams();
   const [data, setData] = useState();
   useEffect(() => {
     fetch(`https://dummyjson.com/products/${params?.pid}`)
@@ -16,11 +16,11 @@ const params = useParams();
   console.log(data);
   return (
     <>
-      <Box sx={{ margin: "8rem 2rem" }}>
+      <Box sx={{ margin: "12rem 10rem" }}>
         <Grid container spacing={2}>
           <Grid item lg={7}>
             {data?.images?.map((mobile) => (
-              <img src={mobile} alt="" width={150} height={180}/>
+              <img src={mobile} alt="" width={150} height={180} />
             ))}
           </Grid>
           <Grid item lg={5}>
@@ -55,13 +55,13 @@ const params = useParams();
                 {data?.description}
               </Typography>
               <Box sx={{ marginBlock: "1rem", display: "flex", gap: 2 }}>
-              <Button variant="contained" sx={{ backgroundColor: "#ff9f00" }}>
-                Add To Cart
-              </Button>
-              <Button variant="contained" sx={{ backgroundColor: "#fb641b" }}>
-                Buy Now
-              </Button>
-            </Box>
+                <Button variant="contained" sx={{ backgroundColor: "#ff9f00" }}>
+                  Add To Cart
+                </Button>
+                <Button variant="contained" sx={{ backgroundColor: "#fb641b" }}>
+                  Buy Now
+                </Button>
+              </Box>
             </Box>
           </Grid>
         </Grid>
