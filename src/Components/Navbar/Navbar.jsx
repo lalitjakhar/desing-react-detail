@@ -22,8 +22,7 @@ const Navbar = () => {
       <AppBar
         sx={{
           paddingInline: "1rem",
-          background:
-            "linear-gradient(-45deg,rgba(147,26,222,1) 0%,rgba(28,206,234,1) 100%)",
+          background: "linear-gradient(-45deg,#ff3b2e 0%,#ecff46 100%)",
           color: "black",
           boxShadow: "none",
         }}

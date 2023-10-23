@@ -18,20 +18,12 @@ const params = useParams();
     <>
       <Box sx={{ margin: "8rem 2rem" }}>
         <Grid container spacing={2}>
-          <Grid item lg={6}>
+          <Grid item lg={7}>
             {data?.images?.map((mobile) => (
-              <img src={mobile} alt="" />
+              <img src={mobile} alt="" width={150} height={180}/>
             ))}
-            <Box sx={{ marginBlock: "1rem", display: "flex", gap: 2 }}>
-              <Button variant="contained" sx={{ backgroundColor: "#ff9f00" }}>
-                Add To Cart
-              </Button>
-              <Button variant="contained" sx={{ backgroundColor: "#fb641b" }}>
-                Buy Now
-              </Button>
-            </Box>
           </Grid>
-          <Grid item lg={6}>
+          <Grid item lg={5}>
             <Box sx={{ display: "block" }}>
               <Typography variant="h5" sx={{ fontWeight: "400" }}>
                 {data?.brand} {data?.title}
@@ -62,6 +54,14 @@ const params = useParams();
               <Typography sx={{ color: "grey", marginBlock: "1rem" }}>
                 {data?.description}
               </Typography>
+              <Box sx={{ marginBlock: "1rem", display: "flex", gap: 2 }}>
+              <Button variant="contained" sx={{ backgroundColor: "#ff9f00" }}>
+                Add To Cart
+              </Button>
+              <Button variant="contained" sx={{ backgroundColor: "#fb641b" }}>
+                Buy Now
+              </Button>
+            </Box>
             </Box>
           </Grid>
         </Grid>
