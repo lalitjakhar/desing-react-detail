@@ -2,6 +2,7 @@ import { Box, Grid, Typography, Button } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Carousel from "react-material-ui-carousel";
 
 const Details = () => {
   const params = useParams();
@@ -16,12 +17,14 @@ const Details = () => {
   console.log(data);
   return (
     <>
-      <Box sx={{ margin: "12rem 10rem" }}>
+      <Box sx={{ margin: "6.6rem 5rem" }}>
         <Grid container spacing={2}>
           <Grid item lg={7}>
-            {data?.images?.map((mobile) => (
-              <img src={mobile} alt="" width={150} height={180} />
-            ))}
+            <Carousel autoPlay>
+              {data?.images?.map((mobile) => (
+                <img src={mobile} alt="" width={'100%'} height={400} />
+              ))}
+            </Carousel>
           </Grid>
           <Grid item lg={5}>
             <Box sx={{ display: "block" }}>

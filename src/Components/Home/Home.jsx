@@ -1,7 +1,9 @@
 import { Box, Grid, Typography, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+    const navigate = useNavigate () ;
   const [data, setData] = useState();
   useEffect(() => {
     fetch("https://dummyjson.com/products")
@@ -47,6 +49,7 @@ const Home = () => {
                     <Button
                       variant="contained"
                       sx={{ backgroundColor: "#fb641b" }}
+                      onClick={() => navigate('/' + mobile?.id)}  // `/${mobile.id}`
                     >
                       Buy Now
                     </Button>
